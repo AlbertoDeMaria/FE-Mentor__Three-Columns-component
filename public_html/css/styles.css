@@ -1,0 +1,178 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+.ff-primary {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.ff-secondary {
+  font-family: "Big Shoulders Display", sans-serif;
+}
+
+body {
+  padding: 1em;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.cards-container {
+  padding: 1.25em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 900px) {
+  .cards-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+.cards-container .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 1.5em;
+  padding: 3.5em 2.5em;
+  color: hsl(0, 0%, 95%);
+}
+@media screen and (min-width: 900px) {
+  .cards-container .card {
+    max-width: 350px;
+    height: 600px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+.cards-container .card .card-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 1.5em;
+}
+@media screen and (min-width: 900px) {
+  .cards-container .card .card-content .card__icon {
+    width: 75px;
+  }
+}
+.cards-container .card .card-content .card__title {
+  font-size: 2.3em;
+}
+@media screen and (min-width: 900px) {
+  .cards-container .card .card-content .card__title {
+    font-size: 3em;
+  }
+}
+.cards-container .card .card-content .card__desc {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 0.9em;
+}
+@media screen and (min-width: 900px) {
+  .cards-container .card .card-content .card__desc {
+    font-size: 1.2em;
+  }
+}
+.cards-container .card button {
+  border: 0;
+  border-radius: 50px;
+  padding: 0.7em 2em;
+  font-size: 0.9em;
+  color: transparent;
+  cursor: pointer;
+}
+@media screen and (min-width: 900px) {
+  .cards-container .card button {
+    font-size: 1.1em;
+  }
+}
+.cards-container .card button:hover {
+  background-color: transparent;
+  color: white;
+  border-color: white;
+}
+.cards-container .card-orange {
+  background-color: hsl(31, 77%, 52%);
+}
+.cards-container .card-orange button {
+  color: hsl(31, 77%, 52%);
+  border: 1px solid hsl(31, 77%, 52%);
+}
+.cards-container .card-blue {
+  background-color: hsl(184, 100%, 22%);
+}
+.cards-container .card-blue button {
+  color: hsl(184, 100%, 22%);
+  border: 1px solid hsl(184, 100%, 22%);
+}
+.cards-container .card-green {
+  background-color: hsl(179, 100%, 13%);
+}
+.cards-container .card-green button {
+  color: hsl(179, 100%, 13%);
+  border: 1px solid hsl(179, 100%, 13%);
+}
